@@ -67,6 +67,7 @@ h1, h3 {
 header {
     width: 100%;
     position: absolute;
+    text-align: center;
 }
 
 header div {
@@ -107,7 +108,7 @@ header div:hover {
 
 .block {
     padding-top: 10px;
-    padding-bottom: 45px;
+    padding-bottom: 105px;
     width: 100%;
 }
 
@@ -599,6 +600,97 @@ footer {
 .whatsapp a:hover {background: #50b154; color: #fff;}
 .weibo a:hover {background: #d52b2b; color: #fff;}
 .dropbox a:hover {background: #1087dd; color: #fff;}
+
+.popup-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+}
+
+.popup {
+  position: absolute;
+  background: #ff7c2563;
+  width: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  padding-top: 30px;
+  border-radius: 8px;
+}
+
+.popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup form input {
+  margin-bottom: 30px;
+  height: 50px;
+  font-size: 20px;
+  outline: none;
+  border-radius: 8px;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+.popup form input[type="submit"] {
+  background: #000000;
+  color: #ffffff;
+  font-size: 24px;
+  transition: ease 0.2s;
+}
+
+.popup form input[type="submit"]:hover {
+  background: #707070;
+}
+
+.popup p {
+  font-size: 35px;
+  font-family: 'Yuji Hentaigana Akari', cursive;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 60%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    width: 58%;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    margin: auto;
+}
+
 </style>
 
 </head>
@@ -612,6 +704,8 @@ footer {
       <!-- <a href="#text2"><div class="inline1">2</div></a> -->
       <a class="effect" href="#text3"><div class="inline1">How to Buy</div></a>
       <a class="effect" href="#text4"><div class="inline1">Magicpaper</div></a>
+      <a class="open-popup" href="#"><div class="inline1">Contract</div></a>
+      <a href="#"><div class="inline1">FAQ</div></a>
       <!--<img src="static/img/border.png" alt="magic" class="header-border">-->
   </header>
 
@@ -625,11 +719,11 @@ footer {
     <div class="block center black" style="margin-top: -150px;" id="whywe">
         <div class="text">
             <h1>Why we?</h1>
-            <p style="text-shadow: 0 0 2px #fff, 0 0 2px #fff,0 0 2px #fff; color: #8722d4">Upon launch within the first two weeks, Wolverinu has accomplished being listed on CoinMarketCap, CoinGecko, Shibaswap, Fegex. Wolverinu reached 21,000,000 Market Cap within 9 days, acquired 4500 holders, hosted 5 AMA’s, and held various contests. It is safe to say that Wolverinu has plenty of potential and room to grow in the near future.</p>
+            <p style="color: #8722d4">Upon launch within the first two weeks, Wolverinu has accomplished being listed on CoinMarketCap, CoinGecko, Shibaswap, Fegex. Wolverinu reached 21,000,000 Market Cap within 9 days, acquired 4500 holders, hosted 5 AMA’s, and held various contests. It is safe to say that Wolverinu has plenty of potential and room to grow in the near future.</p>
         </div>
         <div class="text" id="#text1">
             <h1>Our Vision</h1>
-            <p style="text-shadow: 0 0 2px #fff, 0 0 2px #fff,0 0 2px #fff; color: #228ad4">Launched on October 23rd 2021, Wolverinu’s mission is to bring order to the Ethereum blockchain and prove what a powerful community can achieve when united. Thanks to the continuous and thorough communication within the community, our holders’ questions are always answered thanks to the developers, admins and moderators of Wolverinu.            </p>
+            <p style="color: #228ad4">Launched on October 23rd 2021, Wolverinu’s mission is to bring order to the Ethereum blockchain and prove what a powerful community can achieve when united. Thanks to the continuous and thorough communication within the community, our holders’ questions are always answered thanks to the developers, admins and moderators of Wolverinu.            </p>
         </div>
     </div>
 
@@ -667,10 +761,28 @@ footer {
     <div class="block center black" id="text2">
         <div class="text">
             <img width="50%" id="super-mega-magic" src="static/img/sticker_magic.png" class="wow fadeInRight animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0s" style="float: right;">
-            <p style="text-shadow: 0 0 2px #fff, 0 0 2px #fff,0 0 2px #fff; color: #3ec94c">Upon launch within the first two weeks, Wolverinu has accomplished being listed on CoinMarketCap, CoinGecko, Shibaswap, Fegex. Wolverinu reached 21,000,000 Market Cap within 9 days, acquired 4500 holders, hosted 5 AMA’s, and held various contests. It is safe to say that Wolverinu has plenty of potential and room to grow in the near future.</p>
+            <p style="color: #3ec94c">Upon launch within the first two weeks, Wolverinu has accomplished being listed on CoinMarketCap, CoinGecko, Shibaswap, Fegex. Wolverinu reached 21,000,000 Market Cap within 9 days, acquired 4500 holders, hosted 5 AMA’s, and held various contests. It is safe to say that Wolverinu has plenty of potential and room to grow in the near future.</p>
         </div>
     </div>
 
+    <div class="tilt black"></div>
+      <div class="block center">
+        <h1>FAQ</h1>
+        <button class="accordion">Section 1</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion">Section 2</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion">Section 3</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
+      </div>
     <div class="tilt black"></div>
     
         <div class="block" style="margin-top: -150px;text-align: center;" id="text3">
@@ -856,8 +968,56 @@ footer {
     <a href="#" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
   </div>
 
+
+
 </footer>
+<div class="popup-bg">
+  <div style="text-align: center;" class="popup">
+    <i class="fas fa-times close-popup"></i>
+    <form action="">
+      <p>Contact</p>
+      <input placeholder="Your comment" type="text">
+      <input placeholder="Your email" type="email">
+      <input type="submit" value="Send">
+    </form>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="static/js/wow.min.js"></script>
 <script src="static/js/script.js"></script>
+
+<script>
+  $('.open-popup').click(function(e) {
+      e.preventDefault();
+      $('.popup-bg').fadeIn(800);
+      $('html').addClass('no-scroll');
+  });
+  
+  $('.close-popup').click(function() {
+      $('.popup-bg').fadeOut(800);
+      $('html').removeClass('no-scroll');
+  });
+  </script>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+  </script>
 </body>
 </html>
