@@ -678,10 +678,13 @@ footer {
     transition: 0.4s;
     border-radius: 20px;
     margin-bottom: 5px;
+    transition: ease 0.25s;
 }
 
 .active, .accordion:hover {
     background-color: #ccc;
+    background-color: #c4302b;
+    color: #fff;
 }
 
 .panel {
@@ -772,19 +775,37 @@ footer {
     <div class="tilt black"></div>
       <div class="block center">
         <h1 id="faq">FAQ</h1>
-        <button class="accordion">Section 1</button>
+        <button class="accordion"><i class="fas fa-chevron-down"></i>How do I buy $MAGIC INU?</button>
         <div class="panel">
-          <p>Lorem ipsum...</p>
+          <p>$MAGIC INU is only available on Ethereum blockchain.
+            You would need to own ETH tokens for gas fees.
+            Finally you would need to swap for $MAGIC INU Token on an exchange like Uniswap.</p>
         </div>
 
-        <button class="accordion">Section 2</button>
+        <button class="accordion"><i class="fas fa-chevron-down"></i>Why I can't swap on Uniswap?</button>
         <div class="panel">
-          <p>Lorem ipsum...</p>
+          <p>Try increasing the slippage to 12%
+            Also, During times of high trade volume, prices will fluctuate greatly and may lead to an error.
+            To account for this, you must increase the slippage.</p>
         </div>
 
-        <button class="accordion">Section 3</button>
+        <button class="accordion"><i class="fas fa-chevron-down"></i>How can I know that $MAGIC INU is not a rug?</button>
         <div class="panel">
-          <p>Lorem ipsum...</p>
+          <p>The team has no control over the tokens.
+            The liquidity is locked at Unicrypt and ownership is renounced.</p>
+        </div>
+
+        <button class="accordion"><i class="fas fa-chevron-down"></i>Why can't I see my tokens in my wallet?</button>
+        <div class="panel">
+          <p>In case you don't see your tokens, you will need to add a custom token.
+            In your tokens list, type our contract address, and click on import token.
+            Then you will be able to see the tokens in your wallet.</p>
+        </div>
+
+        <button class="accordion"><i class="fas fa-chevron-down"></i>Is the team doxxed?</button>
+        <div class="panel">
+          <p>The team doesn't have any intention revealing their identities at the current phase.
+            Mainly because of privacy issues.</p>
         </div>
       </div>
     <div class="tilt black"></div>
