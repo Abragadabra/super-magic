@@ -1,3 +1,4 @@
+// BeeBopp font
 @font-face {
 	font-family: BeeBopp;
 	src: 
@@ -5,3 +6,7 @@
 		url('/fonts/BeeBopp/BeeBopp.woff') format('woff'),
 		url('/fonts/BeeBopp/BeeBopp.woff2') format('woff2');
 }
+
+// Roboto and Twinkle Star fonts
+@import url('https://fonts.googleapis.com/css2?family=Twinkle+Star&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
