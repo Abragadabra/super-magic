@@ -7,6 +7,9 @@
 // Wrapper of site
 .wrapper {
 	height: 100%;
-	overflow: hidden;
 	min-height: 100%;
+}
+
+body {
+	background: $bg-gradient;
 }
