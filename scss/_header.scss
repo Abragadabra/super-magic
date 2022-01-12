@@ -1,0 +1,18 @@
+.menu {
+	font-weight: bold;
+	font-size: $fz-menu;
+	font-family: 'Twinkle Star', cursive;
+	text-align: center;
+	a {
+		color: $color-menu;
+	}
+}
+
+.menu__row {
+	display: inline-flex;
+}
+
+.menu__column {
+	display: block;
+	padding: 15px;
+}
