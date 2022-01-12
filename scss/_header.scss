@@ -9,10 +9,15 @@
 }
 
 .menu__row {
-	
+	display: flex;
 }
 
 .menu__column {
 	display: block;
 	padding: 15px;
+}
+
+.img {
+  	width: auto;
+	  max-height: 500px;
 }
