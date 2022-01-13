@@ -2,19 +2,21 @@
 	font-weight: bold;
 	font-size: $fz-menu;
 	font-family: 'Twinkle Star', cursive;
-	text-align: center;
-	position: relative;
+	
 	a {
 		color: $color-menu;
 	}
 	img {
-		max-width: 100%;
+		max-height: 700px;
+		width: 100%;
+		position: absolute;
 	}
 }
 
 .menu__row {
-	display: flex;
 	position: absolute;
+	justify-content: center;
+	
 }
 
 .menu__column {
